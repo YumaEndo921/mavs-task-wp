@@ -11,7 +11,7 @@
         <h2>タイトルだよ</h2>
       </div>
       <p class="topContents_text">テキスト</p>
-      <div class="c-link"><a href="about.html">会社概要ページへ</a></div>
+      <div class="c-link"><a href="about">会社概要ページへ</a></div>
     </div>
   </section>
   <section class="topImages">
