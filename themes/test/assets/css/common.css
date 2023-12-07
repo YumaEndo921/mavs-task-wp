@@ -240,22 +240,36 @@ mixin
   }
 }
 .c-header {
-  background: #ddd;
-  font-size: 22px;
+  margin: 0 3.5rem 0;
 }
 .c-header_wrap {
-  margin-top: 0;
+  margin-top: 11px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 102.4rem;
+  max-width: 137rem;
   width: 98%;
 }
 @media only screen and (max-width:769px) {
   .c-header_wrap {
-    width: 92%;
+    width: 100%;
     max-width: 32.7rem;
   }
+}
+.c-header_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-header_logo {
+  width: 48px;
+}
+.c-header_menu {
+  display: flex;
+}
+.c-header_link {
+  padding: 0 2.55rem 0;
+  font-size: 16px;
 }
 .c-footer {
   background: #ddd;

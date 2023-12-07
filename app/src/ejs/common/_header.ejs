@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,user-scalable=yes" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="<%= description %>">
-    <title><%= title %></title>
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <link href="./assets/css/common.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="./assets/favicon.ico" />
-    <script src="./assets/js/script.js"></script>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,user-scalable=yes" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="<%= description %>">
+  <title>
+    <%= title %>
+  </title>
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <link href="./assets/css/common.css" rel="stylesheet" />
+  <link href="./assets/css/style.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./assets/favicon.ico" />
+  <script src="./assets/js/script.js"></script>
+</head>
+
+<% const menuList=["ABOUT","SERVISE","NEWS","BLOG","COMPANY","RECRUIT","CONTACT"] %>
+
   <body>
     <header class="c-header" id="js-header">
       <div class="c-header_wrap">
-        <h1><a href="/"></a><img src="assets/image/logo.png" alt="" width="80"></a></h1>
-        <%_ if (pageId === 'home'){ -%>
-          <h2>トップヘッダー</h2>
-        <%_ } else { -%>
-          <h2><%= title %></h2>
-        <%_ } -%>
+        <nav class="c-header_nav">
+          <div class="c-header_logo">
+            <a href="index.html">
+              <img src="assets/image/mavs_logo.png" alt="">
+            </a>
+          </div>
+          <ul class="c-header_menu">
+            <% menuList.forEach(function(val){ %>
+              <li class="c-header_menu">
+                <a class="c-header_link" href="<%= val.toLowerCase() %>.html">
+                  <%= val %>
+                </a>
+              </li>
+              <% }) %>
+          </ul>
+        </nav>
       </div>
     </header>
+  </body>

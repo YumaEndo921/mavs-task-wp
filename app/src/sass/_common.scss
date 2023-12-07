@@ -1,12 +1,13 @@
 @import '_variable.scss';
-body {
-}
+
+// body {}
 
 @media screen and (min-width: 769px) {
   .c-onlySp {
     display: none !important;
   }
 }
+
 @media #{$sp} {
   .c-onlyPc {
     display: none !important;
@@ -14,21 +15,45 @@ body {
 }
 
 .c {
-  &-main {
-  }
+  // &-main {}
+
+  // header css
   &-header {
-    background: #ddd;
-    font-size: 22px;
+    // background: #ddd;
+    margin: 0 3.5rem 0;
+
     &_wrap {
-      @include inner;
+      @include inner($mW: 137rem, $w: 100%, $mT: 11px);
+    }
+
+    &_nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &_logo {
+      width: 48px;
+    }
+
+    &_menu {
+      display: flex;
+    }
+
+    &_link {
+      padding: 0 2.55rem 0;
+      font-size: 16px;
     }
   }
+
   &-footer {
     background: #ddd;
+
     &_wrap {
       @include inner;
     }
   }
+
   &-link {
     a {
       display: block;
@@ -38,6 +63,7 @@ body {
       text-align: center;
       color: #fff;
       background-color: $colorOrange;
+
       &:hover {
         color: #fff;
         background: #f56500;
