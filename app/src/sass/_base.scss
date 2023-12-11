@@ -18,6 +18,7 @@ html {
     font-size: calc(10 / 375 * 100vw);
   }
 }
+
 body {
   color: #222;
   background: #fff;
@@ -30,6 +31,7 @@ body {
   width: 100%;
   font-size: 1.6rem;
 }
+
 @media screen and (max-width: 768px) {
   .inner {
     width: 92%;

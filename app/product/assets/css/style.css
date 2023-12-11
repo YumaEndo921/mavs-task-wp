@@ -11,6 +11,101 @@ mixin
 /* ================================================================
 mixin
 ================================================================ */
+.topMv {
+  height: 81.2rem;
+  position: relative;
+}
+.topMv_wrap {
+  position: absolute;
+}
+.topMv_wrap img {
+  vertical-align: top;
+}
+.topMv_wrap:nth-child(1) {
+  bottom: 0;
+  right: 0;
+}
+.topMv_wrap:nth-child(1) img {
+  width: 107.6rem;
+}
+.topMv_wrap:nth-child(2) {
+  bottom: 0;
+  left: 30.8rem;
+}
+.topMv_wrap:nth-child(2) img {
+  width: 61.983rem;
+}
+.topMv_wrap:nth-child(3) {
+  bottom: 0;
+  right: 3.8rem;
+}
+.topMv_wrap:nth-child(3) img {
+  width: 75.3rem;
+}
+.topMv_wrap:nth-child(4) {
+  bottom: 0;
+  left: 35.8rem;
+}
+.topMv_wrap:nth-child(4) img {
+  width: 66.381rem;
+}
+.topMv_wrap:nth-child(5) {
+  bottom: 5.6rem;
+  left: 3.7rem;
+}
+.topMv_wrap:nth-child(5) img {
+  width: 13.559rem;
+}
+.topMv_wrap:nth-child(6) {
+  top: 17.5rem;
+  border-bottom: 2px solid #000;
+  font-size: 11.8rem;
+  font-family: "M PLUS 1p", sans-serif;
+  line-height: 10.6rem;
+  letter-spacing: -0.03em;
+}
+.topMv_wrap:nth-child(6) p {
+  margin-left: 3.7rem;
+  -webkit-text-stroke: 1px #222;
+}
+.topMv_wrap:nth-child(6) p span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+.topMv_wrap:nth-child(6) p span::before {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.3rem;
+  content: "";
+  display: block;
+  width: 7.6rem;
+  height: 11.2rem;
+  background-color: #000;
+  z-index: -1;
+}
+.topMv_wrap:nth-child(6)::after {
+  content: "最高のチームで、最高の価値を提供する";
+  position: absolute;
+  left: 3.5rem;
+  margin-top: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.04em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+}
+
+.topContents {
+  position: relative;
+}
+.topContents_bg {
+  position: absolute;
+  z-index: -2;
+}
+.topContents_bg img {
+  width: 102.6rem;
+}
 .topContents_wrap {
   margin-top: 0;
   margin-bottom: 0px;

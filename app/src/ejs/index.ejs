@@ -4,28 +4,73 @@
     <main class="topMain c-main">
       <section class="topMv">
         <div class="topMv_wrap">
+          <img src="assets/image/leaf.png" alt="leaf">
+        </div>
+        <div class="topMv_wrap">
+          <img src="assets/image/Vector.png" alt="vector">
+        </div>
+        <div class="topMv_wrap">
+          <img src="assets/image/wolfHead.png" alt="wolf">
+        </div>
+        <div class="topMv_wrap">
+          <img src="assets/image/city.png" alt="city">
+        </div>
+        <div class="topMv_wrap">
+          <img src="assets/image/round_logo.png" alt="round_logo">
+        </div>
+        <div class="topMv_wrap">
+          <p><span>U</span>NION<br>CREATE<br>STRENGTH</p>
         </div>
       </section>
       <section class="topContents">
+
+        <div class="topContents_bg">
+          <img src="assets/image/contents_bg.png" alt="round_logo">
+        </div>
+
         <div class="topContents_wrap">
-          <div class="topContents_title">
-            <h2 class="subtitle">タイトルですよ</h2>
+          <div class="topContents_about">
+            <h2 class="topContents_about-ttl">ABOUT</h2>
+
+            <p class="topContents_about-text">　　マーベリックスは技術力とコミュニケーションスキルを兼ね備えたエンジニア集団。</p>
+            <p class="topContents_about-text">　それぞれの個性を活かしチームで取り組むからこそ最高の価値を提供できる。</p>
+            <p class="topContents_about-text">変化を恐れず己を磨き、挑戦を続けながら明日の世界を創造していく。</p>
+            <%- include('./common/_button',{link:"about.html"}) %>
           </div>
-          <p class="topContents_text">テキスト</p>
-          <div class="c-link"><a href="about.html">会社概要ページへ</a></div>
+
+          <div class="topContents_service">
+            <div class="topContents_service-container">
+              <h2 class="topContents_servise-ttl">SERVISE</h2>
+              <p>マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。
+                さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
+              <%- include('./common/_button',{link:"servise.html"}) %>
+            </div>
+            <div class="topContents_service-pic">
+              <img src="assets/image/service.png" alt="round_logo">
+            </div>
+          </div>
+
+          <div class="topContents_blog">
+            <h2 class="topContents_blog-ttl">SERVISE</h2>
+            <!-- ブログコンポーネント -->
+            <%- include('./common/_button',{link:"blog.html"}) %>
+          </div>
+
+          <div class="topContents_member">
+            <h2 class="topContents_member-ttl">SERVISE</h2>
+            <div class="topContents_member-pic">
+              <img src="" alt="">
+            </div>
+            <%- include('./common/_button',{link:"member.html"}) %>
+          </div>
+
+          <div>
+            <!-- 飾り文字 -->
+          </div>
+
         </div>
       </section>
-      <section class="topImages">
-        <div class="topImages_wrap">
-          <p>JPG</p>
-          <img src="assets/image/morning.jpg" alt="">
-          <p>PNG</p>
-          <img src="assets/image/fashion.png" alt="">
-          <p>SVG</p>
-          <img src="assets/image/car.svg" alt="">
-          <%- include('./common/_parts') %>
-        </div>
-      </section>
+
     </main>
 
     <%- include('./common/_footer') %>
