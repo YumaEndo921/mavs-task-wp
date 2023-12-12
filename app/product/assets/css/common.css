@@ -307,7 +307,7 @@ mixin
 .c-button {
   width: 16.8rem;
   padding: 0.65rem 0 0.55rem;
-  display: block;
+  display: inline-block;
   background: #222;
   color: #fff !important;
   text-align: center;
