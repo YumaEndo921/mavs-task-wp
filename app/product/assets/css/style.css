@@ -216,8 +216,9 @@ mixin
 }
 .topContents_blog-ttl {
   position: relative;
-  margin-bottom: 3.8rem;
-  line-height: 10.3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  line-height: 12.6rem;
   font-size: 7.1rem;
   font-family: "M PLUS 1p", sans-serif;
   -webkit-text-stroke: 1px #222;
@@ -229,7 +230,7 @@ mixin
 }
 .topContents_blog-ttl span::before {
   position: absolute;
-  top: 1.9rem;
+  top: 2.4rem;
   left: 0.1rem;
   content: "";
   display: block;
@@ -241,10 +242,10 @@ mixin
 .topContents_blog-ttl::before {
   position: absolute;
   bottom: 2.7rem;
-  right: 6.3rem;
+  right: -20.8rem;
   content: "";
   display: block;
-  width: 51.9rem;
+  width: 81.9rem;
   height: 0.2rem;
   background-color: #000;
   z-index: -1;
@@ -252,12 +253,24 @@ mixin
 .topContents_blog-ttl::after {
   content: "ブログ";
   position: absolute;
-  bottom: -0.6rem;
-  left: 0;
+  bottom: -0.8rem;
+  right: 41.8rem;
   font-size: 1.6rem;
   line-height: 2.3rem;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: bold;
+}
+.topContents_blog-container {
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 2.6rem;
+  transform: translateX(-38.8rem);
+}
+.topContents_blog-pic {
+  width: 43.1rem;
+}
+.topContents_blog-pic img {
+  width: 43.1rem;
 }
 
 .topImages_wrap {
