@@ -243,6 +243,8 @@
 
   &_blog {
 
+    text-align: center;
+
     &-ttl {
       position: relative;
       margin-bottom: 4rem;
@@ -280,7 +282,6 @@
         height: 0.2rem;
         background-color: #000;
         z-index: -1;
-        transform: translateX(-178.5%);
       }
 
       &::after {
@@ -303,7 +304,7 @@
       display: flex;
       gap: 2.6rem;
 
-      animation-name: scroll;
+      animation-name: carousel;
       /* キーフレーム名 */
       animation-duration: 20s;
       /* 再生時間全体は20秒 */
@@ -324,10 +325,107 @@
       }
     }
   }
+
+  // member
+  &_member {
+    margin-bottom: 8rem;
+
+    &-container {
+      position: relative;
+      top: -2.3rem;
+
+    }
+
+    &-ttl {
+      position: relative;
+      margin-bottom: 3.8rem;
+      font-size: 7.1rem;
+      font-family: 'M PLUS 1p', sans-serif;
+      -webkit-text-stroke: 1px $colorBlack;
+
+      & span {
+        position: relative;
+        display: inline-block;
+        color: $colorWhite;
+
+        &::before {
+          position: absolute;
+          top: 1.9rem;
+          left: 0.1rem;
+          content: "";
+          display: block;
+          width: 4rem;
+          height: 6.7rem;
+          background-color: #000;
+          z-index: -1;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        bottom: 2.7rem;
+        // right: 6.3rem;
+        content: "";
+        display: block;
+        width: 51.9rem;
+        height: 0.2rem;
+        background-color: #000;
+        z-index: -1;
+      }
+
+      &::after {
+        content: "メンバー";
+        position: absolute;
+        bottom: -0.6rem;
+        left: 0;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: bold;
+      }
+    }
+
+    &-text {
+      margin-bottom: 5.0rem;
+      line-height: 2.8rem;
+    }
+
+    &-pic {
+      position: relative;
+      ;
+
+      & img {
+        width: 100rem;
+
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -2rem;
+        right: -5rem;
+        display: block;
+        content: "";
+        width: 100rem;
+        height: 31.6rem;
+        background-color: #E6E6E6;
+        z-index: -1;
+      }
+    }
+  }
+
+  &_decoration {
+    width: 204.3rem;
+    animation-name: roop;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
 }
 
 /* スクロールアニメーションのキーフレーム */
-@keyframes scroll {
+@keyframes carousel {
 
   /* 初期位置は1個目の画像が左端 */
   0% {
@@ -370,6 +468,20 @@
 
   100% {
     transform: translateX(-178.5%);
+  }
+}
+
+/* スクロールアニメーションのキーフレーム */
+@keyframes roop {
+
+  /* 初期位置は1個目の画像が左端 */
+  0% {
+    transform: translateX(-73rem);
+  }
+
+  100% {
+
+    transform: translateX(-20rem);
   }
 }
 

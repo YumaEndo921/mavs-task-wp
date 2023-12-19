@@ -214,6 +214,9 @@ mixin
   background-color: #E6E6E6;
   z-index: -1;
 }
+.topContents_blog {
+  text-align: center;
+}
 .topContents_blog-ttl {
   position: relative;
   margin-bottom: 4rem;
@@ -266,7 +269,7 @@ mixin
   margin-bottom: 5rem;
   display: flex;
   gap: 2.6rem;
-  animation-name: scroll;
+  animation-name: carousel;
   /* キーフレーム名 */
   animation-duration: 20s;
   /* 再生時間全体は20秒 */
@@ -281,9 +284,88 @@ mixin
 .topContents_blog-pic img {
   width: 43.1rem;
 }
+.topContents_member {
+  margin-bottom: 8rem;
+}
+.topContents_member-container {
+  position: relative;
+  top: -2.3rem;
+}
+.topContents_member-ttl {
+  position: relative;
+  margin-bottom: 3.8rem;
+  font-size: 7.1rem;
+  font-family: "M PLUS 1p", sans-serif;
+  -webkit-text-stroke: 1px #222;
+}
+.topContents_member-ttl span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+.topContents_member-ttl span::before {
+  position: absolute;
+  top: 1.9rem;
+  left: 0.1rem;
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 6.7rem;
+  background-color: #000;
+  z-index: -1;
+}
+.topContents_member-ttl::before {
+  position: absolute;
+  bottom: 2.7rem;
+  content: "";
+  display: block;
+  width: 51.9rem;
+  height: 0.2rem;
+  background-color: #000;
+  z-index: -1;
+}
+.topContents_member-ttl::after {
+  content: "メンバー";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+}
+.topContents_member-text {
+  margin-bottom: 5rem;
+  line-height: 2.8rem;
+}
+.topContents_member-pic {
+  position: relative;
+}
+.topContents_member-pic img {
+  width: 100rem;
+}
+.topContents_member-pic::after {
+  position: absolute;
+  bottom: -2rem;
+  right: -5rem;
+  display: block;
+  content: "";
+  width: 100rem;
+  height: 31.6rem;
+  background-color: #E6E6E6;
+  z-index: -1;
+}
+.topContents_decoration {
+  width: 204.3rem;
+  animation-name: roop;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 /* スクロールアニメーションのキーフレーム */
-@keyframes scroll {
+@keyframes carousel {
   /* 初期位置は1個目の画像が左端 */
   0% {
     transform: translateX(0rem);
@@ -316,6 +398,16 @@ mixin
   }
   100% {
     transform: translateX(-178.5%);
+  }
+}
+/* スクロールアニメーションのキーフレーム */
+@keyframes roop {
+  /* 初期位置は1個目の画像が左端 */
+  0% {
+    transform: translateX(-73rem);
+  }
+  100% {
+    transform: translateX(-20rem);
   }
 }
 .topImages_wrap {
