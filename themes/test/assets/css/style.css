@@ -261,10 +261,19 @@ mixin
   font-weight: bold;
 }
 .topContents_blog-container {
+  position: relative;
+  left: -38.8rem;
   margin-bottom: 5rem;
   display: flex;
   gap: 2.6rem;
-  transform: translateX(-38.8rem);
+  animation-name: scroll;
+  /* キーフレーム名 */
+  animation-duration: 20s;
+  /* 再生時間全体は20秒 */
+  animation-delay: 0s;
+  /* 読込直後から遅延無しで開始 */
+  animation-iteration-count: infinite;
+  /* 無限に繰り返す */
 }
 .topContents_blog-pic {
   width: 43.1rem;
@@ -273,6 +282,42 @@ mixin
   width: 43.1rem;
 }
 
+/* スクロールアニメーションのキーフレーム */
+@keyframes scroll {
+  /* 初期位置は1個目の画像が左端 */
+  0% {
+    transform: translateX(0rem);
+  }
+  /* 1個分左の位置に進めて2個目の画像を左端にする */
+  20% {
+    transform: translateX(-44.5%);
+  }
+  /* 少しの間上と同じ位置 */
+  25% {
+    transform: translateX(-44.5%);
+  }
+  /* 2個分左の位置に進めて3個目の画像を左端にする */
+  45% {
+    transform: translateX(-89.5%);
+  }
+  /* 少しの間上と同じ位置 */
+  50% {
+    transform: translateX(-89.5%);
+  }
+  /* 以降は上と同様に繰り返し */
+  70% {
+    transform: translateX(-134%);
+  }
+  75% {
+    transform: translateX(-134%);
+  }
+  95% {
+    transform: translateX(-178.5%);
+  }
+  100% {
+    transform: translateX(-178.5%);
+  }
+}
 .topImages_wrap {
   margin-top: 0;
   margin-bottom: 0px;
