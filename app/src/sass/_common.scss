@@ -49,11 +49,116 @@
     }
   }
 
+  // footer css
   &-footer {
-    background: #ddd;
+    position: relative;
+    // TODO 後で消す
+    height: 35.2rem;
+
+    background: $colorBlack;
+
+    &::before {
+      position: absolute;
+      top: -0.1rem;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-right: 9.1rem solid transparent;
+      border-left: 9.1rem solid transparent;
+      border-bottom: 21.54rem solid #4D4D4D;
+      border-top: 0;
+      transform: rotate(180deg) translateX(50%);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0.1rem;
+      right: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-right: 9.1rem solid transparent;
+      border-left: 9.1rem solid transparent;
+      border-bottom: 21.54rem solid #4D4D4D;
+      border-top: 0;
+      transform: translateX(50%);
+    }
+
+
+
 
     &_wrap {
-      @include inner;
+      color: $colorWhite;
+      @include inner($mW: 123.3rem);
+
+    }
+
+    &_container {
+      position: relative;
+      top: 7.1rem;
+      left: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse
+    }
+
+    &_menu {
+      display: flex;
+      gap: 6.7rem;
+
+      &List {
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    &_action {
+
+      display: flex;
+    }
+
+    &_actionBox {
+      position: relative;
+      width: 24.4rem;
+      height: 5.3rem;
+    }
+
+    &_button {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      // transform: translateX(-50%);
+      z-index: 1;
+      width: 23.882rem;
+      height: 5.332rem;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+
+      &::before {
+        transform: skewX(-25deg);
+        content: "";
+        /*ボックスを作る*/
+        position: absolute;
+        border: 1px solid #FFF;
+        /*ポジションで中央に配置*/
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &_logo {
+      position: relative;
+      top: -1rem;
+      width: 16.1rem;
+    }
+
+    &_copyright {
+      font-size: 1rem;
     }
   }
 
@@ -83,8 +188,5 @@
     text-align: center;
     font-family: 'Hind', sans-serif;
     border-radius: 10rem;
-
-
-    // &_link {}
   }
 }

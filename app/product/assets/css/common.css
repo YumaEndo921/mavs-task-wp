@@ -275,14 +275,45 @@ mixin
   font-size: 16px;
 }
 .c-footer {
-  background: #ddd;
+  position: relative;
+  height: 35.2rem;
+  background: #222;
+}
+.c-footer::before {
+  position: absolute;
+  top: -0.1rem;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 9.1rem solid transparent;
+  border-left: 9.1rem solid transparent;
+  border-bottom: 21.54rem solid #4D4D4D;
+  border-top: 0;
+  transform: rotate(180deg) translateX(50%);
+}
+.c-footer::after {
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 9.1rem solid transparent;
+  border-left: 9.1rem solid transparent;
+  border-bottom: 21.54rem solid #4D4D4D;
+  border-top: 0;
+  transform: translateX(50%);
 }
 .c-footer_wrap {
+  color: #fff;
   margin-top: 0;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 102.4rem;
+  max-width: 123.3rem;
   width: 98%;
 }
 @media only screen and (max-width:769px) {
@@ -290,6 +321,60 @@ mixin
     width: 92%;
     max-width: 32.7rem;
   }
+}
+.c-footer_container {
+  position: relative;
+  top: 7.1rem;
+  left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.c-footer_menu {
+  display: flex;
+  gap: 6.7rem;
+}
+.c-footer_menuList {
+  margin-bottom: 2.8rem;
+}
+.c-footer_action {
+  display: flex;
+}
+.c-footer_actionBox {
+  position: relative;
+  width: 24.4rem;
+  height: 5.3rem;
+}
+.c-footer_button {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: 1;
+  width: 23.882rem;
+  height: 5.332rem;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+.c-footer_button::before {
+  transform: skewX(-25deg);
+  content: "";
+  /*ボックスを作る*/
+  position: absolute;
+  border: 1px solid #FFF;
+  /*ポジションで中央に配置*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.c-footer_logo {
+  position: relative;
+  top: -1rem;
+  width: 16.1rem;
+}
+.c-footer_copyright {
+  font-size: 1rem;
 }
 .c-link a {
   display: block;
